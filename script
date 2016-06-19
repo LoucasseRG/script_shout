@@ -1,0 +1,19 @@
+$(document).ready(function(){
+
+    //le style des boutons
+    var style= '<style>#nappa_le_bg{font-family:Open Sans;margin-top:-25px;margin-bottom:-10px;}#nappa_le_bg button{width:auto;font-size:12px;padding:5px;} #nappa_le_bg button:hover{background-color:#006d80 !important;transition: all 1s;}</style>';
+
+    //les réponses pré-définies
+     var Sharing_Exclusive_Experiences = '<button class="button taigachat_bbcode" data-code="[URL=https://realitygaming.fr/teams/sharing-exclusive-experiences.2592/]La Sharing Exclusive Experiences forme des rédacteurs et helpers, tente ta chance ! :smile:[/URL]" ><i class="fa fa-thumb-tack"></i> Sharing Exclusive Experiences</button>';
+     var Sharing_Exclusive_Contents = '<button class="button taigachat_bbcode" data-code="[URL=https://realitygaming.fr/teams/sharing-exclusive-contents.1736/]La Sharing Exclusive Contents recrute des rédacteurs et helpers, tente ta chance ! :smile:[/URL]" ><i class="fa fa-users"></i> Sharing Exclusive Contents</button>';
+     var PlugDJ = '<button class="button taigachat_bbcode" data-code="Venez passer vos musiques préférées sur le Plug.RG https://plug.dj/realitygaming :dance:" ><i class="fa fa-music"></i> Plug.RG</button>';
+	 var user1 = $('#taigachat_box').children('ol').children('li').eq(5).children('span').eq(1).children('a').children('span').text();
+	 var user2 = $('#taigachat_box').children('ol').children('li').eq(17).children('span').eq(1).children('a').text();
+	 var user3 = $('#taigachat_box').children('ol').children('li').eq(23).children('span').eq(1).children('a').text();
+	 var userinchat = $('#taigachat_count').text();
+     var hello = '<button class="button taigachat_bbcode" data-code="Salut à @' + user1 + " , @" + user2 + " , @" + user3 + " et aux " + userinchat + ' membres actuellement connectés sur la shoutbox. ;)" ><i class="fa fa-comments-o"></i> Bonjour</button>';
+        alert(user1)
+    //On se trouve la barre de pré-définie
+    $('#taigachat_box').before('<br>' + style + '<center><div class="nappa_le_bg" id="nappa_le_bg">' + Sharing_Exclusive_Experiences + Sharing_Exclusive_Contents + PlugDJ + hello + '</div></br></Center>');
+
+});
